@@ -5,9 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.remote.webelement import WebElement
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 import time
 import requests
+from selenium.webdriver.chrome.options import Options
+
 ##########################################################################################    
 
 # Set up Chrome options to speed up the browser initialization and reduce unnecessary features
@@ -33,7 +34,7 @@ end_pages =int ( input("end page number :")  )
 
 # Set up the driver (make sure you have ChromeDriver or similar installed)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options) #to downlaod dependcisse 
-# driver = webdriver.Chrome() # i already have it all in my pc 
+
 
 # Open the login page
 driver.get(login_url)
@@ -69,7 +70,7 @@ for page_num in range(start_page, end_pages + 1): #13 ~ 105
     time.sleep(3)  # Wait for the page to load (adjust if necessary)
     
     # Find the video elements and extract the 'src' URL from the <source> tag
-    video_elements = wait.until(EC.presence_of_all_elements_located((By.TAG_NAME, 'video')))
+    video_elements = driver.find_elements(By.TAG_NAME, 'video')
     
     for video_element in video_elements:
         source = video_element.find_element(By.TAG_NAME, 'source')
