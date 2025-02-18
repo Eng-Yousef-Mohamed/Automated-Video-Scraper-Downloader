@@ -29,5 +29,27 @@ Ensure you have Google Chrome installed, and ChromeDriver is available. The scri
 
 ## Run the Python Script
 ```bash
-python main.py
+python video_take.py
 ```
+
+# Convert to Executable
+## To convert the script into a .exe file, run:
+```bash
+pyinstaller --onefile --name=AutoVideo --hidden-import=selenium.webdriver.common.keys video_take.py
+```
+## The generated executable will be available inside the dist/ folder.
+
+# Configuration
+## The script prompts for:
+
+- **Email & Password** (for authentication) (for authentication)
+- **Start & End Page Numbers** (to define the lesson range)
+# Output
+- A text file video_urls.txt containing extracted video links.
+- Downloaded video files saved in the same directory.
+
+# Notes
+- Ensure the platform's structure has not changed, as XPath values may need updates.
+- If any videos fail to download, check the video_urls.txt file and retry manually.
+# Author
+- Yousef Mohamed Fathy
