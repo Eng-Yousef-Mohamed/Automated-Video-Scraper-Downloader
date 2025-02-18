@@ -1,5 +1,5 @@
 # Automated Video Scraper & Downloader
-![Demo_Screenshot](Demo_Screenshot.JPG)
+![Demo_Screenshot](Demo_Screenshot.jpg)
 ## Overview
 
 This project automates the process of logging into an online learning platform, scraping video URLs from lesson pages, and downloading them for offline access. It utilizes **Selenium** for web automation and **Requests** for downloading the videos. Additionally, the script is converted into an executable (`.exe`) for easy execution without requiring Python installation.
