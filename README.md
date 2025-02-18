@@ -1,5 +1,5 @@
 # Automated Video Scraper & Downloader
-
+![Demo_Screenshot](Demo_Screenshot.png)
 ## Overview
 
 This project automates the process of logging into an online learning platform, scraping video URLs from lesson pages, and downloading them for offline access. It utilizes **Selenium** for web automation and **Requests** for downloading the videos. Additionally, the script is converted into an executable (`.exe`) for easy execution without requiring Python installation.
@@ -27,7 +27,7 @@ Ensure you have Google Chrome installed, and ChromeDriver is available. The scri
 
 # Usage
 
-## Run the Python Script
+### Run the Python Script
 ```bash
 python video_take.py
 ```
@@ -37,19 +37,17 @@ python video_take.py
 ```bash
 pyinstaller --onefile --name=AutoVideo --hidden-import=selenium.webdriver.common.keys video_take.py
 ```
-## The generated executable will be available inside the dist/ folder.
+ The generated executable will be available inside the dist/ folder.
 
 # Configuration
 ## The script prompts for:
 
-- **Email & Password** (for authentication) (for authentication)
+- **Email & Password** (for authentication) 
 - **Start & End Page Numbers** (to define the lesson range)
 # Output
 - A text file video_urls.txt containing extracted video links.
 - Downloaded video files saved in the same directory.
 
-# Notes
-- Ensure the platform's structure has not changed, as XPath values may need updates.
-- If any videos fail to download, check the video_urls.txt file and retry manually.
+
 # Author
 - Yousef Mohamed Fathy
