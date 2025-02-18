@@ -20,4 +20,14 @@ Ensure you have **Python 3.x** installed. Then, install the necessary Python lib
 
 ```bash
 pip install selenium webdriver-manager requests pyinstaller
+```
+### 2. Install Google Chrome & ChromeDriver
 
+Ensure you have Google Chrome installed, and ChromeDriver is available. The script automatically downloads the correct version using webdriver-manager.
+
+# Usage
+
+## Run the Python Script
+```bash
+python main.py
+```
